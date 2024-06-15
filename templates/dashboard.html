@@ -1,0 +1,53 @@
+
+{% extends 'home.html' %}
+{% block addcss %}
+<style>
+    .one {
+      position: relative;
+      display: inline-block;
+    }
+
+    .one-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      left: 0;
+    }
+
+    .one-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+    }
+
+    .one-content a:hover {
+      background-color: #ddd;
+    }
+
+    .one:hover .one-content {
+      display: block;
+    }
+  </style>
+{% endblock %}
+{% block notes %}
+<div class="one">
+    <button class="one">Notes</button>
+   
+      <a href="{{url_for('additems')}}">Add items</a>
+      <a href="{{url_for('viewitems')}}">View items</a>
+      <a href="{{url_for('logout')}}">Logout</a>
+      <a href="{{url_for('profile')}}">Profile</a>
+
+      
+    
+  </div>
+  
+  
+{% endblock %}
+{% block content %}
+<p> We are in Dashboard</p>
+{% endblock %}

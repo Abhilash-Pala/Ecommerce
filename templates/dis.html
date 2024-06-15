@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+         .buttons-container {
+            margin-top: 20px;
+            text-decoration: none;
+        
+            
+        }
+
+        .button {
+            padding: 10px 34px;
+            background-color: #ffc107;
+            color: black;
+            border: none;
+            border-radius: 15px;
+            
+            cursor: pointer;
+            
+        }
+
+        .button a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: rgb(11, 245, 11);
+        }
+        .Description{
+          margin-left:17%;
+          color:#3f51b5;
+        }
+        .item-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            margin-top: 20px;
+        }
+    </Style>
+
+</head>
+<body>
+    {% block content %}
+  <section class="us container">
+        <div class="row">
+            {% if count %}
+            {% for i in count %}
+                <div class="col-md-2">
+                    <div class="card mb-6" style="width: 10rem;">
+                        <a href="{{url_for('discription',item_id=i[0])}}"><img src="{{url_for('static', filename=i[7])}}" class="card-img-top" alt="nature"></a>
+                        <div class="card-body">
+                            <a href="{{url_for('discription',item_id=i[0])}}" style="text-decoration: none;"><h5 class="card-title">{{i[2]}}</h5></a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{i[1]}}</li>
+                           
+                            <li class="list-group-item">
+                                <select name="category" class="form-select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                </select>
+                            </li>
+                            
+                            <li class="list-group-item">{{i[5]}}</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="{{url_for('cart',item_id=i[0],item_name=i[1],discription=i[2],category=i[4],price=i[5],quantity=i[3],imgid=i[7])}}" class="card-link">Add to Cart</a>
+                            <a href="#" class="card-link">Buy Now</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    {% endblock %}
+</body>
+</html>

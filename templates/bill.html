@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice</h1>
+        
+        <table>
+            <tr>
+                <th>Username</th>
+                <td>{{ count[0] }}</td>
+            </tr>
+            <tr>
+                <th>Mobile No</th>
+                <td>{{ count[1] }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ count[2] }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ count[3] }}</td>
+            </tr>
+            <tr>
+                <th>OrderId</th>
+                <td>{{ count[5] }}</td>
+            </tr>
+            <tr>
+                <th>Item Id</th>
+                <td>{{ count[6] }}</td>
+            </tr>
+           
+          
+            <tr>
+                <th>Quantity</th>
+                <td>{{ count[7] }}</td>
+            </tr>
+            <tr>
+                <th>Total Price</th>
+                <td>{{ count[8] }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ count[9] }}</td>
+            </tr>
+           
+                <th>Discription</th>
+                <td>{{ count[11] }}</td>
+            </tr>
+            
+        </table>
+       
+    </div>
+    <div>
+       
+        <!-- <img src="{{url_for('static', filename=count[7])}}"  style="height: 170px;" width="50px" class="card-img-top" alt="nature"> -->
+    
+</div>
+</body>
+</html>

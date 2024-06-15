@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dddddd;
+        }
+        th {
+            background-color: #9575cd;
+            color: #ffffff;
+        }
+        tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        tr:last-of-type td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}
+    <table>
+        <thead>
+            <tr>
+                <th>Read Review</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <th>Title</th>
+                <td>{{ i[0] }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ i[1] }}</td>
+            </tr>
+            <tr>
+                <th>Rating</th>
+                <td>{{ i[2] }}</td>
+            </tr>
+            
+           
+        </tbody>
+    </table>
+    {% endblock content %}
+</body>
+</html>

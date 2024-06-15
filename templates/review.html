@@ -1,0 +1,22 @@
+{% extends 'addreview.html' %}
+
+    <!-- Add Bootstrap CSS -->
+    {% block addcss%}
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='addreview.css')}}">
+    {% endblock %}
+{% block content %}
+    <br>
+    <div class="container">
+        <h1>Add Review</h1>
+        <form method="post">
+           <label>Title</label>
+           <textarea name="title"></textarea>
+            <label for="contentField">Content:</label>
+            <textarea id="contentField" class="content-field" placeholder="Write your content..." name="content" required></textarea>
+            <label>Rating</label>
+            <textarea class="rating"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock content %}

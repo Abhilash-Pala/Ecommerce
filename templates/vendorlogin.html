@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                 <title>Login Form</title>
+               <style>
+                              *{
+                                             /* background-color: aqua; */
+                              }
+.one{
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+               background-color:;  
+                                             width:300px;
+                                             border-top: 500px;
+}
+                              
+                              input[type="email"],
+                              input[type="password"] {
+                              width: 90%;
+                              padding: 10px;
+                              margin-bottom: 15px;
+                              border: 1px solid #0905fe;
+                              border-radius: 5px;
+                              box-sizing: border-box;
+                              color:#f815bc;
+                              border-radius: 10px 10px;
+                              border: 2px solid blue;
+                              }
+                              .two{
+                                             border-radius: 4px 4px 4px;
+                                             background-color: rgb(190, 219, 26);
+
+                              }
+                              .two:hover{
+                                             background-color: #09f740;
+                              }
+               </style>
+</head>
+<body>
+  <img src="https://tse2.mm.bing.net/th?id=OIP.xhy_X9W9XuEwoimL5mytSQHaEK&pid=Api&P=0&h=180" alt="nature" width="1300px" height="560px">
+      <center>
+               <form class="one" method="post">
+                              <h1 style="color: rgb(225, 255, 0);">Login Form</h1>
+                              <label style="color: white;">Email</label>
+                              <input type="email" id="email" name="email" required>
+                              <label style="color: white;">Password</label>
+                              <input type="password" id="password" name="password">
+                              <button class="two">Login</button>
+                            </form>
+                             <a href="{{url_for('forgot')}}"> <button class="two">forgottpassword</button></a>
+               
+      </center>         
+</body>
+</html>

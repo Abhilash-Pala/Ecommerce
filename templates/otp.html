@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      .one{
+        
+  position: absolute;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+               background-color:;  
+                                             width:300px;
+                                             border-top: 500px;
+}
+button{
+  background-color: aqua;
+  
+}
+button:hover{
+  background-color: chartreuse;
+}
+      
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    
+    {% for message in messages %}
+     <center><p style="color: #007bff;">{{ messages }}</p></center>
+    {% endfor %}
+   
+  {% endif %}
+{% endwith %}
+<body>
+  <img src="https://wallpapers.com/images/featured/simple-clean-8g9017acqfddycrl.jpg" alt="nature"  width="1300px" height="560px">
+    <center>
+      <form method="post" class="one">
+        <label style="color: aqua;">Enter Your Otp</label>
+        <input type="text" name="otp"><br/><br/>
+        <button>submit</button>
+    </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title>Login Form</title>
+               <style>
+                             
+.one{
+      position: absolute;
+  top: 53%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+                                         
+               background-color: #b2dfdb;
+                                             width:300px;
+                                             border-top: 500px;
+}
+                              
+                              input[type="email"],
+                              input[type="password"] {
+                              width: 90%;
+                              padding: 10px;
+                              margin-bottom: 15px;
+                              border: 1px solid #0905fe;
+                              border-radius: 5px;
+                              box-sizing: border-box;
+                              color:black;
+                              border-radius: 10px 10px;
+                              border: 2px solid blue;
+                              }
+                              .two{
+                                             border-radius: 4px 4px 4px;
+                                             background-color: rgb(190, 219, 26);
+
+                              }
+                              .two:hover{
+                                             background-color: #09f740;
+                              }
+               </style>
+</head>
+{% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+<body>
+      <img src="https://wallpapercave.com/wp/wp2939867.png"  alt="nature" width="1300px" height="560px">
+      <center>
+               <form class="one" method="post" action="{{url_for('userlogin')}}">
+                              <h1 style="color: rgb(11, 88, 254);">Login Form</h1>
+                              <label style="color: black;">Email</label>
+                              <input type="email" id="email" name="email">
+                              <label style="color: black;">Password</label>
+                              <input type="password" id="password" name="password">
+                              <button class="two">Login</button>
+               </form>
+      </center>         
+</body>
+</html>

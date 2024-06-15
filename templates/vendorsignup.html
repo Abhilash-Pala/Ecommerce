@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+               <meta charset="UTF-8">
+               <meta name="viewport" content="width=device-width, initial-scale=1.0">
+               <title> Vendor Registration Form</title>
+               <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+               <style>
+                              *{
+                                             background-image: url("");
+                                             background-size: cover;
+                                                                          }
+                              .one{
+                                   position: absolute;  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+                                             
+                                            
+                                             width:300px;
+                              
+                              }
+                              input[type="text"],
+                              input[type="email"],
+                              input[type="phonenumber"],
+                              input[type="address"],
+                              input[type="password"] {
+                              width: 90%;
+                              padding: 7px;
+                              margin-bottom: 15px;
+                              border: 1px solid #0905fe;
+                              border-radius: 5px;
+                              box-sizing: border-box;
+                              /* color:#15e9f8; */
+                              border-radius: 10px 10px;
+                              border: 2px solid blue;
+                              }
+                              .two{
+                                             border-radius: 4px 4px 4px;
+                                             background-color: #0cf51f;
+
+                              }
+                              .two:hover{
+                                             background-color: #d7f709;
+                              }
+
+               </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    
+    {% for message in messages %}
+      <p>{{ message }}<p>
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}
+<body>
+       <img src="https://images.freecreatives.com/wp-content/uploads/2016/04/Abstract-Website-Background.jpg" alt="nature" width="1300px" height="580px">
+       <center>
+               <form class="one" method="post" action="{{url_for('vendorsignup')}}">  
+                    <h1 style="color: white;">Create Account</h1>
+                    <label for="name"  style="color: white">Name</label><br>
+        <input type="text" id="name" name="name" required maxlength="50"><br>
+        
+        <label for="email" style="color: white;">Email</label><br>
+        <input type="email" id="email" name="email" required maxlength="30"><br>
+        
+        <label for="phno" style="color: white;">phonenumber</label><br>
+        
+        <input type="phonenumber" id="phonenumber" name="mobile_no" placeholder="91+" required maxlength="10"><br>
+        
+        <label for="address" style="color: white;">Address</label><br>
+        <input type="address" id="address" name="address" required maxlength="30"><br>
+
+        <label for="password"  style="color: white;">Password</label><br>
+        <input type="password"  name="password" required maxlength="20"><br>
+
+        
+
+        
+        <button class="two" class="btn btn-danger" onclick="validateForm()">Submit </button>
+        
+               </form>
+               
+             </html>
+            
+       </center>
+             
+</body>
+</html>
